@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
-private const val BASE_URL = "https://private-8f4dda-testeabi.apiary-mock.com"
+private const val BASE_URL = "https://private-8f4dda-testeabi.apiary-mock.com/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
@@ -18,7 +18,7 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface BeersApiService {
-    @GET("/produtos")
+    @GET("produtos")
     suspend fun getBeers(): BeersResponse
 }
 

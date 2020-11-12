@@ -12,7 +12,7 @@ import kotlinx.coroutines.withContext
 class BeersListRepository {
     private val beersListResponse = MutableLiveData<List<Beers>>()
 
-    val  cocktailList: LiveData<List<Beers>>
+    val  beersList: LiveData<List<Beers>>
         get() = beersListResponse
 
     init {
