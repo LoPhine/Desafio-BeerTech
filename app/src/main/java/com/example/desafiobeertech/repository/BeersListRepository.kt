@@ -9,6 +9,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+
+
 class BeersListRepository {
     private val beersListResponse = MutableLiveData<List<Beers>>()
 
@@ -22,7 +24,7 @@ class BeersListRepository {
     private fun getBeersList() {
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val listResult = BeersApi.retrofitService.getBeers().BeersList
+                val listResult = BeersApi.retrofitService.getBeers().body()
                 beersListResponse.postValue(listResult)
 
             } catch (e: Exception) {

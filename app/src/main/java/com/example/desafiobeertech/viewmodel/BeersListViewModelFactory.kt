@@ -9,6 +9,6 @@ class BeersListViewModelFactory(private val repository: BeersListRepository):  V
             if (modelClass.isAssignableFrom(BeersListViewModel::class.java)) {
                 return BeersListViewModel(repository) as T
             }
-            throw IllegalArgumentException("Deu ruim!")
+            throw IllegalArgumentException("Unknown ViewModel class")
         }
 }

@@ -10,7 +10,7 @@ data class Beers (
     val description: String,
 
     @Json(name = "preco")
-    val price: Int,
+    val price: Double,
 
     @Json(name = "desconto")
     val discount: Boolean,
