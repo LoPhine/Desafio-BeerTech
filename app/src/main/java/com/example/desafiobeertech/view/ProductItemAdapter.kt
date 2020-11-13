@@ -9,10 +9,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.desafiobeertech.R
 import com.example.desafiobeertech.entities.ItemProduct
-import java.io.FileDescriptor
+
 
 class ProductItemAdapter: RecyclerView.Adapter<ProductItemAdapter.ProductItemViewHolder>() {
     var data = listOf<ItemProduct>()
+        set(value){
+            field = value
+            notifyDataSetChanged()
+        }
 
     inner class ProductItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val productItem: TextView = itemView.findViewById(R.id.productTextView)
