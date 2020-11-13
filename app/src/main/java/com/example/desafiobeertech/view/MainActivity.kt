@@ -1,4 +1,4 @@
-package com.example.desafiobeertech
+package com.example.desafiobeertech.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
+import com.example.desafiobeertech.R
 import com.example.desafiobeertech.repository.BeersListRepository
 import com.example.desafiobeertech.viewmodel.BeersListViewModel
 import com.example.desafiobeertech.viewmodel.BeersListViewModelFactory
