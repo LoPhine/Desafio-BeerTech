@@ -24,7 +24,7 @@ class ProductItemAdapter: RecyclerView.Adapter<ProductItemAdapter.ProductItemVie
         val priceItem: TextView = itemView.findViewById(R.id.priceTextView)
         val imageItem: ImageView = itemView.findViewById(R.id.ItemImage)
 
-        fun bind(product: String, description: String, price: Double, url: String){
+        fun bind(product: String, description: String, price: String, url: String){
             productItem.text = product
             descriptionItem.text = description
             priceItem.text = price
