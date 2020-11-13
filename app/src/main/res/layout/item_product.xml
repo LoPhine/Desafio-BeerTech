@@ -1,55 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="5dp">
 
     <TextView
         android:id="@+id/priceTextView"
+        style="@style/price_style"
         android:layout_width="wrap_content"
         android:layout_height="23dp"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/linearLayout2"
         app:layout_constraintTop_toTopOf="@+id/linearLayout2"
-        tools:text="R$20,00"
-        style="@style/price_style" />
+        tools:text="R$20,00" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView">
+        app:layout_constraintBottom_toBottomOf="@+id/ItemImage"
+        app:layout_constraintTop_toTopOf="@+id/ItemImage"
+        app:layout_constraintVertical_bias="0.456"
+        tools:layout_editor_absoluteX="122dp">
 
         <TextView
             android:id="@+id/productTextView"
-            android:text="TextView"
-            tools:text="Colorado Ribeirão"
             style="@style/text_bold"
-            android:padding="5dp"/>
+            android:padding="5dp"
+            android:text="TextView"
+            tools:text="Colorado Ribeirão" />
 
         <TextView
             android:id="@+id/descriptionTextView"
+            style="@style/description_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
-            tools:text="6 x 600 ml"
-            style="@style/description_style" />
+            tools:text="6 x 600 ml" />
 
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/ItemImage"
+        android:layout_width="0dp"
+        android:layout_height="119dp"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:srcCompat="@drawable/colorado_beer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
