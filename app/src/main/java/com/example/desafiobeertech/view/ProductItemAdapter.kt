@@ -22,7 +22,7 @@ class ProductItemAdapter: RecyclerView.Adapter<ProductItemAdapter.ProductItemVie
         val productItem: TextView = itemView.findViewById(R.id.productTextView)
         val descriptionItem: TextView = itemView.findViewById(R.id.descriptionTextView)
         val priceItem: TextView = itemView.findViewById(R.id.priceTextView)
-        val imageItem: ImageView = itemView.findViewById(R.id.ItemImage)
+        val imageItem: ImageView = itemView.findViewById(R.id.itemImage)
 
         fun bind(product: String, description: String, price: Double, url: String){
             productItem.text = product

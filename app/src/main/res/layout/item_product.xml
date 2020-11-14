@@ -11,21 +11,19 @@
         style="@style/price_style"
         android:layout_width="wrap_content"
         android:layout_height="23dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="R$20,00" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
+        style="@style/products_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/ItemImage"
-        app:layout_constraintTop_toTopOf="@+id/ItemImage"
-        app:layout_constraintVertical_bias="0.456"
-        tools:layout_editor_absoluteX="122dp">
+        app:layout_constraintBottom_toBottomOf="@+id/itemImage"
+        app:layout_constraintStart_toEndOf="@+id/itemImage"
+        app:layout_constraintTop_toTopOf="@+id/itemImage">
 
         <TextView
             android:id="@+id/productTextView"
@@ -45,10 +43,9 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/ItemImage"
-        android:layout_width="0dp"
-        android:layout_height="119dp"
-        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        android:id="@+id/itemImage"
+        android:layout_width="103dp"
+        android:layout_height="99dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/colorado_beer" />

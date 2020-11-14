@@ -16,4 +16,8 @@
     <style name="description_style">
         <item name="android:padding">5dp</item>
     </style>
+
+    <style name="products_layout">
+        <item name="android:orientation">vertical</item>
+    </style>
 </resources>
