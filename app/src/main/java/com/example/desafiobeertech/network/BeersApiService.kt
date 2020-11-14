@@ -5,7 +5,9 @@ import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
+import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.POST
 
 private const val BASE_URL = "https://private-8f4dda-testeabi.apiary-mock.com/"
 
@@ -21,6 +23,9 @@ private val retrofit = Retrofit.Builder()
 interface BeersApiService {
     @GET("produtos")
     suspend fun getBeers(): Response<List<Beers>>
+
+//    @POST("Login")
+//    suspend fun postLogin(@Body posts: LoginPost): Response<ProductsResponse>
 }
 
 object BeersApi {

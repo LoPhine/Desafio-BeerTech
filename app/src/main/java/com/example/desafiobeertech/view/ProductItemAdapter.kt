@@ -8,11 +8,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.desafiobeertech.R
-import com.example.desafiobeertech.entities.ItemProduct
+import com.example.desafiobeertech.network.Beers
 
 
 class ProductItemAdapter: RecyclerView.Adapter<ProductItemAdapter.ProductItemViewHolder>() {
-    var data = listOf<ItemProduct>()
+    var data = listOf<Beers>()
         set(value){
             field = value
             notifyDataSetChanged()
@@ -24,10 +24,10 @@ class ProductItemAdapter: RecyclerView.Adapter<ProductItemAdapter.ProductItemVie
         val priceItem: TextView = itemView.findViewById(R.id.priceTextView)
         val imageItem: ImageView = itemView.findViewById(R.id.ItemImage)
 
-        fun bind(product: String, description: String, price: String, url: String){
+        fun bind(product: String, description: String, price: Double, url: String){
             productItem.text = product
             descriptionItem.text = description
-            priceItem.text = price
+            priceItem.text = price.toString()
             val url: String = url
 
             if(url.isNotEmpty()) {
@@ -54,7 +54,7 @@ class ProductItemAdapter: RecyclerView.Adapter<ProductItemAdapter.ProductItemVie
     }
 
     override fun onBindViewHolder(holder: ProductItemViewHolder, position: Int) {
-        val itemProductToShow: ItemProduct = data.get(position)
+        val itemProductToShow: Beers = data.get(position)
         holder.bind(itemProductToShow.product, itemProductToShow.description, itemProductToShow.price, itemProductToShow.image)
     }
 }
